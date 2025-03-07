@@ -1,0 +1,19 @@
+{
+  "record": "Record",
+  "recording": "Recording...",
+  "selectSource": "Select Source",
+  "settings": "Settings",
+  "stop": "Stop",
+  "time": {
+    "hour": "hour",
+    "hours": "hours",
+    "minute": "minute",
+    "minutes": "minutes",
+    "second": "second",
+    "seconds": "seconds",
+  },
+  "fileCount": {
+    "one": "{{count}} file",
+    "other": "{{count}} files"
+  }
+}

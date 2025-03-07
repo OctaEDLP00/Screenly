@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "#/definitions/Translations",
+  "definitions": {
+    "Translations": {
+      "defautl": { },
+      "type": "object",
+      "properties": {
+        "record": {
+          "type": "string"
+        },
+        "stop": {
+          "type": "string"
+        },
+        "recording": {
+          "type": "string"
+        },
+        "selectSource": {
+          "type": "string"
+        },
+        "settings": {
+          "type": "string"
+        },
+        "time": {
+          "type": "object",
+          "properties": {
+            "hour": {
+              "type": "string",
+              "default": ""
+            },
+            "hours": {
+              "type": "string",
+              "default": ""
+            },
+            "minute": {
+              "type": "string",
+              "default": ""
+            },
+            "minutes": {
+              "type": "string",
+              "default": ""
+            },
+            "second": {
+              "type": "string",
+              "default": ""
+            },
+            "seconds": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          "default": { },
+          "additionalProperties": false
+        },
+        "fileCount": {
+          "type": "object",
+          "properties": {
+            "one": {
+              "type": "string",
+              "default": ""
+            },
+            "others": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          "default": { },
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "record",
+        "stop",
+        "recording",
+        "selectSource",
+        "settings"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

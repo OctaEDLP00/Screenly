@@ -1,0 +1,19 @@
+{
+  "record": "Registra",
+  "recording": "Registrazione...",
+  "selectSource": "Seleziona sorgente",
+  "settings": "ricordo",
+  "stop": "Ferma",
+  "time": {
+    "hour": "herue",
+    "hours": "herues",
+    "minute": "minute",
+    "minutes": "minutes",
+    "second": "secondo",
+    "seconds": "secondi",
+  },
+  "fileCount": {
+    "one": "{{ count }} archivio",
+    "other": "{{ count }} file"
+  }
+}

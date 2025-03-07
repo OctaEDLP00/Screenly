@@ -1,0 +1,48 @@
+{
+  "author": "OctaEDLP00 <octavio.pincha@gmail.com>",
+  "productName": "Screenly",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "eslint --ext .ts,.tsx ."
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "1.0.1"
+  },
+  "description": "",
+  "devDependencies": {
+    "@electron-forge/maker-deb": "7.7.0",
+    "@electron-forge/maker-rpm": "7.7.0",
+    "@electron-forge/maker-squirrel": "7.7.0",
+    "@electron-forge/maker-zip": "7.7.0",
+    "@electron-forge/plugin-fuses": "7.7.0",
+    "@electron-forge/plugin-vite": "7.7.0",
+    "@electron-forge/shared-types": "7.7.0",
+    "@electron/fuses": "1.8.0",
+    "@types/electron-squirrel-startup": "1.0.2",
+    "@types/node": "22.13.9",
+    "@typescript-eslint/eslint-plugin": "5.0.0",
+    "@typescript-eslint/parser": "5.0.0",
+    "electron": "34.3.0",
+    "eslint": "8.0.1",
+    "eslint-plugin-import": "2.31.0",
+    "ts-node": "10.9.0",
+    "typescript": "5.8.2",
+    "vite": "6.2.0"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "main": ".vite/build/main.js",
+  "name": "screenly-app",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "electron",
+      "electron-winstaller",
+      "esbuild"
+    ]
+  },
+  "type": "module",
+  "version": "0.0.1"
+}

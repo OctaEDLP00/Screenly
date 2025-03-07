@@ -1,0 +1,19 @@
+{
+  "record": "Grabar",
+  "recording": "Grabando...",
+  "selectSource": "Seleccionar Fuente",
+  "settings": "Configuración",
+  "stop": "Detener",
+  "time": {
+    "hour": "hora",
+    "hours": "horas",
+    "minute": "minuto",
+    "minutes": "minutos",
+    "second": "segundo",
+    "seconds": "segundos",
+  },
+  "fileCount": {
+    "one": "{{ count }} archivo",
+    "other": "{{ count }} archivos"
+  }
+}
