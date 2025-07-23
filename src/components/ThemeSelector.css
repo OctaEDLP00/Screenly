@@ -1,0 +1,8 @@
+select {
+  padding: 0.5rem;
+  border-radius: 4px;
+  background: var(--control-bg);
+  color: var(--control-text);
+  border: 1px solid var(--control-border);
+  cursor: pointer;
+}

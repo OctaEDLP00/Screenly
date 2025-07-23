@@ -1,20 +1,40 @@
 {
   "compilerOptions": {
+    /* Core compilation options */
     "target": "ESNext",
     "module": "ESNext",
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "noImplicitAny": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "outDir": "dist",
     "sourceMap": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": [ "src/*" ]
+      "~/*": [ "src/*" ]
     },
-    "outDir": "dist",
-    "moduleResolution": "node",
+    "useDefineForClassFields": true,
     "resolveJsonModule": true,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "node",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+
+    /* Type Checking */
+    "noImplicitAny": true,
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "erasableSyntaxOnly": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true
   },
+  /* Project file includes */
   "include": [
     "src",
     "src/type/global.d.ts"

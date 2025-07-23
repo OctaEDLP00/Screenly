@@ -1,62 +1,56 @@
-import type { Theme } from '@/type/i18n.d'
+// import type { Theme } from '~/types/i18n.d'
+import rawStyles from './ThemeSelector.css?raw'
 
 class ThemeSelector extends HTMLElement {
-  selectElement: HTMLSelectElement
+  selectElement: HTMLSelectElement | null = null
 
   constructor() {
     super()
+    if (this.shadowRoot == null) return
     this.attachShadow({ mode: 'open' })
-    this.selectElement = this.querySelector('select')
   }
 
   private initializeOptions() {
     const options: Array<{ value: string; label: string }> = [
       { value: 'system', label: '💻 System' },
       { value: 'light', label: '☀ Light' },
-      { value: 'dark', label: '🌙 Dark' }
+      { value: 'dark', label: '🌙 Dark' },
     ]
 
     options.map(({ value, label }) => {
-      const opt = this.createElement('option')
-      option.value = value
-      option.textContent = label
+      const opt = document.createElement('option')
+      opt.value = value
+      opt.textContent = label
+      if (this.selectElement == null) return
       this.selectElement.appendChild(opt)
     })
   }
 
   private loadCurrentTheme() {
     const currentTheme = window.themeAPI.getTheme()
+    if (this.selectElement == null) return
     this.selectElement.value = currentTheme
   }
 
   private setupEventListeners() {
-    this.selectElement.addEventListener('change' function () {
-      window.themeAPI.setTheme(this.selectElement.value as Theme)
-    })
+    if (this.selectElement == null) return
+
+    this.selectElement.addEventListener('change', function () {})
   }
 
   private setupThemeObserver() {
-    window.themeAPI.onThemeChange((theme) => {
-      this.selectElement.value = theme === 'system'
-        ? 'system'
-        : theme
+    window.themeAPI.onThemeChange(theme => {
+      if (this.selectElement == null) return
+      this.selectElement.value = theme === 'system' ? 'system' : theme
     })
   }
 
   static get styles() {
-    return /* css */`
-      select {
-        padding: 0.5rem;
-        border-radius: 4px;
-        background: var(--control-bg);
-        color: var(--control-text);
-        border: 1px solid var(--control-border);
-        cursor: pointer;
-      }
-    `
+    return rawStyles
   }
 
   connectedCallback() {
+    this.selectElement = this.querySelector('select')
     this.render()
     this.loadCurrentTheme()
     this.setupEventListeners()
@@ -64,8 +58,9 @@ class ThemeSelector extends HTMLElement {
   }
 
   render() {
-    this.shadowRoot.innerHTML = /* html */`
-      <style>${ ThemeSelector.styles }</style>
+    if (this.shadowRoot == null) return
+    this.shadowRoot.innerHTML = /* html */ `
+      <style>${ThemeSelector.styles}</style>
       <select>
         ${this.initializeOptions()}
       </select>

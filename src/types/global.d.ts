@@ -1,10 +1,15 @@
-interface Window {
-  themeAPI: {
-    getTheme: () => Theme;
-    setTheme: (theme) => void
-    onThemeChange: (callback: (theme: string) => void) => void
-  }
+type Theme = 'dark' | 'light' | 'system'
+
+interface ThemeAPI {
+  getTheme: () => Theme
+  setTheme: (theme: Theme) => void
+  onThemeChange: (callback: (theme: Theme) => void) => void
 }
+
+interface Window {
+  themeAPI: ThemeAPI
+}
+
 
 declare module '../i18n/it.json' {
   const value: i18n

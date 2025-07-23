@@ -5,7 +5,7 @@ import { MakerZIP } from '@electron-forge/maker-zip'
 import { FusesPlugin } from '@electron-forge/plugin-fuses'
 import { VitePlugin } from '@electron-forge/plugin-vite'
 import type { ForgeConfig } from '@electron-forge/shared-types'
-import { FuseOptions, FuseVersion } from '@electron/fuses'
+import { FuseVersion } from '@electron/fuses'
 
 const config: ForgeConfig = {
   packagerConfig: {
@@ -42,12 +42,14 @@ const config: ForgeConfig = {
 
     new FusesPlugin({
       version: FuseVersion.V1,
-      [FuseOptions.RunAsNode]: false,
-      [FuseOptions.EnableCookieEncryption]: true,
-      [FuseOptions.EnableNodeOptionsEnvironmentVariable]: false,
-      [FuseOptions.EnableNodeCliInspectArguments]: false,
-      [FuseOptions.EnableEmbeddedAsarIntegrityValidation]: true,
-      [FuseOptions.OnlyLoadAppFromAsar]: true
+      options: {
+        RunAsNode: false,
+        EnableCookieEncryption: true,
+        EnableNodeOptionsEnvironmentVariable: false,
+        EnableNodeCliInspectArguments: false,
+        EnableEmbeddedAsarIntegrityValidation: true,
+        OnlyLoadAppFromAsar: true
+      }
     })
   ]
 }

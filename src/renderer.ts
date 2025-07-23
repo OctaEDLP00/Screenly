@@ -26,9 +26,9 @@
  * ```
  */
 
-import './styles/global.css'
-import '@/components/Screenly'
-import '@/components/ThemeSelector'
+import '~/styles/global.css'
+import '~/components/Screenly'
+import '~/components/ThemeSelector'
 
 document.addEventListener('DOMContentLoaded', () => {
   const savedTheme = window.themeAPI.getTheme()

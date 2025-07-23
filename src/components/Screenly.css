@@ -1,0 +1,36 @@
+:host {
+  display: block;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.container {
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.stop-btn {
+  background: #e53e3e;
+}
+
+.status {
+  margin-top: 1rem;
+  color: #666;
+}

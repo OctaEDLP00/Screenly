@@ -10,10 +10,10 @@
     "minute": "minute",
     "minutes": "minutes",
     "second": "second",
-    "seconds": "seconds",
+    "seconds": "seconds"
   },
   "fileCount": {
     "one": "{{count}} file",
-    "other": "{{count}} files"
+    "others": "{{count}} files"
   }
 }

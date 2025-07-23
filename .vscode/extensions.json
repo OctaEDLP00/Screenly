@@ -1,5 +1,8 @@
 {
   "recommendations": [
-    "tobermory.es6-string-html"
+    "tobermory.es6-string-html",
+    "esbenp.prettier-vscode",
+    "yoavbls.pretty-ts-errors",
+    "dbaeumer.vscode-eslint"
   ]
 }

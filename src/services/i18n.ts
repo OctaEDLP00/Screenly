@@ -1,4 +1,4 @@
-import type { DateTimeFormatOptions, Language, NumberFormatOptions } from '@/types/i18n.d';
+import type { DateTimeFormatOptions, Language, NumberFormatOptions } from '~/types/i18n.d';
 import { ipcRenderer } from 'electron';
 
 type TranslationResource = Record<string, Record<string, string>>;

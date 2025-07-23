@@ -1,6 +1,6 @@
 import { contextBridge, ipcRenderer } from 'electron'
 import Store from 'electron-store'
-import type { Theme } from '@/types/i18n.d'
+import type { Theme } from '~/types/i18n.d'
 
 const store = new Store()
 contextBridge.exposeInMainWorld('themeAPI', {

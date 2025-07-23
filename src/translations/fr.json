@@ -3,17 +3,17 @@
   "recording": "Enregistrement...",
   "selectSource": "Choisir la source",
   "settings": "Paramètres",
-  "stop": "Arrêt"
+  "stop": "Arrêt",
   "time": {
     "hour": "herue",
     "hours": "herues",
     "minute": "minute",
     "minutes": "minutes",
     "second": "",
-    "seconds": "",
+    "seconds": ""
   },
   "fileCount": {
     "one": "{{count}} fichier",
-    "other": "{{count}} fichiers"
+    "others": "{{count}} fichiers"
   }
 }
